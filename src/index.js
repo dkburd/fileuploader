@@ -1,9 +1,16 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
+import App from './App';
 
+const FILES = [
+  {"fileType":"jpg","size":"4.3MB","name":"me on skis.jpg","status":"Synced"},
+  {"fileType":"mov","size":"1.3GB","name":"cats falling.mov","status":"Uploaded"},
+  {"fileType":"txt","size":"0.9KB","name":"My December expenses.txt","status":"Uploaded"},
+  {"fileType":"mp3","size":"3.4MB","name":"disturbed_sound_of_silence.mp3","status":"New"},
+];
 
-// Note: document.getElementById('root') achieves the same result as document.querySelector('#root'). It doesn't matter which one you use. The querySelector method works with any CSS selector and getElementById only works with ids
+ReactDOM.render(<App files={FILES}/>, document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Starting with the index.js file, add a declaration of a const to hold some data for you to test this app. Pass the const to the App component as a prop.
